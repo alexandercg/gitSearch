@@ -15,6 +15,7 @@
 		118EB29D1D4E9BD7000CF3A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118EB29B1D4E9BD7000CF3A9 /* LaunchScreen.storyboard */; };
 		118EB2A61D4E9F93000CF3A9 /* GitFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 118EB2A51D4E9F93000CF3A9 /* GitFetcher.m */; };
 		118EB2A91D4EA363000CF3A9 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 118EB2A81D4EA363000CF3A9 /* Repository.m */; };
+		118EB2AD1D4EA9DE000CF3A9 /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 118EB2AC1D4EA9DE000CF3A9 /* ResultsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		118EB2A51D4E9F93000CF3A9 /* GitFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitFetcher.m; sourceTree = "<group>"; };
 		118EB2A71D4EA363000CF3A9 /* Repository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
 		118EB2A81D4EA363000CF3A9 /* Repository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Repository.m; sourceTree = "<group>"; };
+		118EB2AB1D4EA9DE000CF3A9 /* ResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableViewController.h; sourceTree = "<group>"; };
+		118EB2AC1D4EA9DE000CF3A9 /* ResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 			children = (
 				118EB2931D4E9BD7000CF3A9 /* ViewController.h */,
 				118EB2941D4E9BD7000CF3A9 /* ViewController.m */,
+				118EB2AB1D4EA9DE000CF3A9 /* ResultsTableViewController.h */,
+				118EB2AC1D4EA9DE000CF3A9 /* ResultsTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 			files = (
 				118EB2A61D4E9F93000CF3A9 /* GitFetcher.m in Sources */,
 				118EB2A91D4EA363000CF3A9 /* Repository.m in Sources */,
+				118EB2AD1D4EA9DE000CF3A9 /* ResultsTableViewController.m in Sources */,
 				118EB2951D4E9BD7000CF3A9 /* ViewController.m in Sources */,
 				118EB2921D4E9BD7000CF3A9 /* AppDelegate.m in Sources */,
 				118EB28F1D4E9BD7000CF3A9 /* main.m in Sources */,
