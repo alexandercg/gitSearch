@@ -13,6 +13,7 @@
 		118EB2981D4E9BD7000CF3A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118EB2961D4E9BD7000CF3A9 /* Main.storyboard */; };
 		118EB29A1D4E9BD7000CF3A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 118EB2991D4E9BD7000CF3A9 /* Assets.xcassets */; };
 		118EB29D1D4E9BD7000CF3A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118EB29B1D4E9BD7000CF3A9 /* LaunchScreen.storyboard */; };
+		118EB2A61D4E9F93000CF3A9 /* GitFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 118EB2A51D4E9F93000CF3A9 /* GitFetcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		118EB2991D4E9BD7000CF3A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		118EB29C1D4E9BD7000CF3A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		118EB29E1D4E9BD7000CF3A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		118EB2A41D4E9F93000CF3A9 /* GitFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitFetcher.h; sourceTree = "<group>"; };
+		118EB2A51D4E9F93000CF3A9 /* GitFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitFetcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				118EB2931D4E9BD7000CF3A9 /* ViewController.h */,
 				118EB2941D4E9BD7000CF3A9 /* ViewController.m */,
 				118EB2961D4E9BD7000CF3A9 /* Main.storyboard */,
+				118EB2A41D4E9F93000CF3A9 /* GitFetcher.h */,
+				118EB2A51D4E9F93000CF3A9 /* GitFetcher.m */,
 				118EB2991D4E9BD7000CF3A9 /* Assets.xcassets */,
 				118EB29B1D4E9BD7000CF3A9 /* LaunchScreen.storyboard */,
 				118EB29E1D4E9BD7000CF3A9 /* Info.plist */,
@@ -149,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				118EB2A61D4E9F93000CF3A9 /* GitFetcher.m in Sources */,
 				118EB2951D4E9BD7000CF3A9 /* ViewController.m in Sources */,
 				118EB2921D4E9BD7000CF3A9 /* AppDelegate.m in Sources */,
 				118EB28F1D4E9BD7000CF3A9 /* main.m in Sources */,
