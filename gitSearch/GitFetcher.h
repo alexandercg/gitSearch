@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GitFetcher : NSObject
+@interface GitFetcher : NSObject{
+    GitFetcher* instance;
+}
+
+@property (nonatomic, retain) NSString *languageSearch;
+@property (nonatomic, retain) NSMutableArray *itemsFound;
+
++(id)sharedInstance;
 
 @end
