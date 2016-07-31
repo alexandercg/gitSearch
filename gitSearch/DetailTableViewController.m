@@ -10,4 +10,12 @@
 
 @implementation DetailTableViewController
 
+@synthesize repoSelected;
+
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    [self.navigationItem setTitle:repoSelected.fullName];
+    
+}
+
 @end
