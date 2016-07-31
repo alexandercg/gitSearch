@@ -25,6 +25,15 @@
     [self dismissViewControllerAnimated:true completion:nil];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showDetailRepo"]) {
+        NSIndexPath* index = (NSIndexPath *)sender;
+        DetailTableViewController* detailViewController = [segue destinationViewController];
+        detailViewController.repoSelected = [[[GitFetcher sharedInstance] itemsFound] objectAtIndex:index.row];
+    }
+}
+
 -(void) loadMoreItems{
     [self.tableView reloadData];
 }
