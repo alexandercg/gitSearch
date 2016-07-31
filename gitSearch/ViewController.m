@@ -20,6 +20,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     txtSearch.delegate = self;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchFinished:) name:@"SearchFinishedWithResults" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchFinished:) name:@"SearchFinishedWithNoResults" object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,6 +48,12 @@
     [spinner startAnimating];
     [loaderView addSubview:spinner];
     [self.view addSubview:loaderView];
+}
+
+-(void) searchFinished:(NSNotification *) notification{
+    [self loaderHidden:YES];
+
+    
 }
 
 @end
