@@ -1,26 +1,75 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dC0-tR-CbE">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="IFD-Wj-WwR">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="dC0-tR-CbE" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="e1q-ch-qTW"/>
+                        <viewControllerLayoutGuide type="bottom" id="xuI-u7-TKq"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="6Hv-Ff-QHn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX5-ai-9uM">
+                                <rect key="frame" x="200" y="200" width="200" height="35"/>
+                                <color key="backgroundColor" red="0.42551779750000002" green="0.80998617409999996" blue="0.4090934396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="5p9-w8-SqW"/>
+                                    <constraint firstAttribute="width" constant="200" id="UsV-8B-5V9"/>
+                                </constraints>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="makeSearch:" destination="dC0-tR-CbE" eventType="touchUpInside" id="WAB-9e-DmC"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Programming language" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2a0-6h-b4t">
+                                <rect key="frame" x="20" y="157" width="560" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Vtv-EX-BB7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconGit" translatesAutoresizingMaskIntoConstraints="NO" id="6pE-gr-nO1">
+                                <rect key="frame" x="250" y="37" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Wya-TP-hQA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93709164860000005" green="0.93694382909999996" blue="0.95754462480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eX5-ai-9uM" firstAttribute="top" secondItem="2a0-6h-b4t" secondAttribute="bottom" constant="8" symbolic="YES" id="5CX-un-vF5"/>
+                            <constraint firstItem="2a0-6h-b4t" firstAttribute="trailing" secondItem="6Hv-Ff-QHn" secondAttribute="trailingMargin" id="9ai-iP-p47"/>
+                            <constraint firstItem="2a0-6h-b4t" firstAttribute="top" secondItem="e1q-ch-qTW" secondAttribute="bottom" constant="137" id="Cak-1D-z0r"/>
+                            <constraint firstItem="6pE-gr-nO1" firstAttribute="top" secondItem="e1q-ch-qTW" secondAttribute="bottom" constant="17" id="YkM-Ol-oyq"/>
+                            <constraint firstItem="2a0-6h-b4t" firstAttribute="top" secondItem="6pE-gr-nO1" secondAttribute="bottom" constant="20" id="cnz-BC-Cjx"/>
+                            <constraint firstItem="2a0-6h-b4t" firstAttribute="leading" secondItem="6Hv-Ff-QHn" secondAttribute="leadingMargin" id="kPn-H6-kz7"/>
+                            <constraint firstItem="6pE-gr-nO1" firstAttribute="centerX" secondItem="2a0-6h-b4t" secondAttribute="centerX" id="kUU-rc-aJS"/>
+                            <constraint firstItem="eX5-ai-9uM" firstAttribute="centerX" secondItem="2a0-6h-b4t" secondAttribute="centerX" id="l1T-U2-xiX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtSearch" destination="2a0-6h-b4t" id="SKn-NC-Wig"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Drh-D2-uUy" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="28" y="-262"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iconGit" width="100" height="100"/>
+    </resources>
 </document>
