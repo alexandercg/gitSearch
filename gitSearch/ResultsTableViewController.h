@@ -10,4 +10,6 @@
 
 @interface ResultsTableViewController : UITableViewController
 
+- (IBAction)backToSearch:(UIBarButtonItem *)sender;
+
 @end

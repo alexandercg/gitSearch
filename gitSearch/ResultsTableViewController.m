@@ -10,4 +10,13 @@
 
 @implementation ResultsTableViewController
 
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    
+}
+
+- (IBAction)backToSearch:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:true completion:nil];
+}
+
 @end
