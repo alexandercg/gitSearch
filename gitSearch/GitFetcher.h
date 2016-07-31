@@ -17,4 +17,9 @@
 
 +(id)sharedInstance;
 
+
+-(void) searchRepoBy:(NSString*)language andPage:(int)page;
+
+
+
 @end
