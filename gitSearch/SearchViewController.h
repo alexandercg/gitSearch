@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController<UITextFieldDelegate>{
+@interface SearchViewController : UIViewController<UITextFieldDelegate>{
     UIView* loaderView;
 }
 @property (weak, nonatomic) IBOutlet UITextField *txtSearch;
