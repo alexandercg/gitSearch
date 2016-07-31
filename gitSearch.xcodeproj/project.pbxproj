@@ -66,8 +66,7 @@
 			children = (
 				118EB2901D4E9BD7000CF3A9 /* AppDelegate.h */,
 				118EB2911D4E9BD7000CF3A9 /* AppDelegate.m */,
-				118EB2931D4E9BD7000CF3A9 /* ViewController.h */,
-				118EB2941D4E9BD7000CF3A9 /* ViewController.m */,
+				118EB2AA1D4EA7C4000CF3A9 /* Controllers */,
 				118EB2961D4E9BD7000CF3A9 /* Main.storyboard */,
 				118EB2A41D4E9F93000CF3A9 /* GitFetcher.h */,
 				118EB2A51D4E9F93000CF3A9 /* GitFetcher.m */,
@@ -87,6 +86,15 @@
 				118EB28E1D4E9BD7000CF3A9 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		118EB2AA1D4EA7C4000CF3A9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				118EB2931D4E9BD7000CF3A9 /* ViewController.h */,
+				118EB2941D4E9BD7000CF3A9 /* ViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
