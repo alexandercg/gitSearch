@@ -17,6 +17,7 @@
 		118EB2A91D4EA363000CF3A9 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 118EB2A81D4EA363000CF3A9 /* Repository.m */; };
 		118EB2AD1D4EA9DE000CF3A9 /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 118EB2AC1D4EA9DE000CF3A9 /* ResultsTableViewController.m */; };
 		118EB2B11D4EB4A9000CF3A9 /* RepoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 118EB2B01D4EB4A9000CF3A9 /* RepoTableViewCell.m */; };
+		118EB2B41D4EB5D7000CF3A9 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 118EB2B31D4EB5D7000CF3A9 /* DetailTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		118EB2AC1D4EA9DE000CF3A9 /* ResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewController.m; sourceTree = "<group>"; };
 		118EB2AF1D4EB4A9000CF3A9 /* RepoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepoTableViewCell.h; sourceTree = "<group>"; };
 		118EB2B01D4EB4A9000CF3A9 /* RepoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepoTableViewCell.m; sourceTree = "<group>"; };
+		118EB2B21D4EB5D7000CF3A9 /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
+		118EB2B31D4EB5D7000CF3A9 /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +105,8 @@
 				118EB2941D4E9BD7000CF3A9 /* ViewController.m */,
 				118EB2AB1D4EA9DE000CF3A9 /* ResultsTableViewController.h */,
 				118EB2AC1D4EA9DE000CF3A9 /* ResultsTableViewController.m */,
+				118EB2B21D4EB5D7000CF3A9 /* DetailTableViewController.h */,
+				118EB2B31D4EB5D7000CF3A9 /* DetailTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				118EB2B41D4EB5D7000CF3A9 /* DetailTableViewController.m in Sources */,
 				118EB2A61D4E9F93000CF3A9 /* GitFetcher.m in Sources */,
 				118EB2A91D4EA363000CF3A9 /* Repository.m in Sources */,
 				118EB2AD1D4EA9DE000CF3A9 /* ResultsTableViewController.m in Sources */,
