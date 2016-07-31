@@ -7,6 +7,7 @@
 //
 
 #import "SearchViewController.h"
+#import "GitFetcher.h"
 
 @interface SearchViewController ()
 
@@ -19,18 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    txtSearch.delegate = self;
     
+    txtSearch.delegate = self;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchFinished:) name:@"SearchFinishedWithResults" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchFinished:) name:@"SearchFinishedWithNoResults" object:nil];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)makeSearch:(id)sender{
     
     
 }
@@ -50,10 +43,62 @@
     [self.view addSubview:loaderView];
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 -(void) searchFinished:(NSNotification *) notification{
     [self loaderHidden:YES];
-
+    if ([[notification name] isEqualToString:@"SearchFinishedWithNoResults"]){
+        [self showAlertWithTitle:@"No results" message:@"Sorry there is no results for your search."];
+        return;
+    }
+    txtSearch.text = @"";
+    [self performSegueWithIdentifier:@"ShowResults" sender:self];
     
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self makeSearch:nil];
+    return YES;
+}
+
+- (IBAction)makeSearch:(id)sender{
+    if ([self verifyTextField:txtSearch]) {
+        [self showAlertWithTitle:@"Warning" message:@"Please enter a language programming."];
+        txtSearch.text = @"";
+        [txtSearch becomeFirstResponder];
+        return;
+    }
+    [self.view endEditing:YES];
+    [self loaderHidden:NO];
+    [[GitFetcher sharedInstance] searchRepoBy:txtSearch.text andPage:1];
+    
+}
+
+-(BOOL) verifyTextField:(UITextField *) textField{
+    NSString* text = textField.text;
+    text = [text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    return [text length] == 0;
+}
+
+
+-(void) showAlertWithTitle:(NSString *)title message:(NSString *)message{
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:title
+                                 message:message
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* okButton = [UIAlertAction
+                               actionWithTitle:@"Ok"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * action) {
+                                   
+                               }];
+    
+    [alert addAction:okButton];
+    [self presentViewController:alert animated:YES completion:nil];
+    
+}
 @end
