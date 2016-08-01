@@ -11,7 +11,8 @@
 #import "IssueTableViewCell.h"
 #import "RepoIssues.h"
 #import "GeneralTableViewCell.h"
-#import "ContribuitorTableViewCell.h"
+#import "ContributorTableViewCell.h"
+#import "RepoContributor.h"
 @import SafariServices;
 
 @implementation DetailTableViewController
@@ -23,9 +24,13 @@
     [self.navigationItem setTitle:repoSelected.fullName];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchFinished:) name:@"SearchFinishedWithIssues" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchFinished:) name:@"SearchFinishedWithUsers" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchFinished:) name:@"RequestFinishedWithError" object:nil];
     [[[GitFetcher sharedInstance] repoIssues] removeAllObjects];
+    [[[GitFetcher sharedInstance] repoContributors] removeAllObjects];
     [[GitFetcher sharedInstance] getIssuesByRepo:repoSelected.fullName];
+    [[GitFetcher sharedInstance] getContributorsByRepo:repoSelected.fullName];
+    
     
 }
 
@@ -90,7 +95,7 @@
             cells = (int)[[[GitFetcher sharedInstance] repoIssues] count];
             break;
         case 2:
-            cells = (int)[[[GitFetcher sharedInstance] repoContribuitors] count];
+            cells = (int)[[[GitFetcher sharedInstance] repoContributors] count];
             break;
     }
     return cells;
@@ -136,7 +141,14 @@
         return cell;
     }
     if (indexPath.section == 2) {
-        UITableViewCell* cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"contribuitorsCell"];
+        ContributorTableViewCell* cell = (ContributorTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"contributorsCell"];
+        if (cell == nil) {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ContributorCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+        RepoContributor *item = [[[GitFetcher sharedInstance] repoContributors] objectAtIndex:indexPath.row];
+        cell.lblUsername.text = item.username;
+        cell.lblContributions.text = [NSString stringWithFormat:@"%d Contributions", item.contributions];
         return cell;
     }
     return nil;
