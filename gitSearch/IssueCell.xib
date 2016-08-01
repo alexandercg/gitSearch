@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="issueCell" rowHeight="55" id="oS2-wN-zyO" customClass="IssueTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oS2-wN-zyO" id="FxF-gD-Pqn">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z52-W8-eos">
+                        <rect key="frame" x="8" y="10" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="cBC-nA-cEe"/>
+                        </constraints>
+                        <state key="normal" image="iconIssueOutline" backgroundImage="iconIssueOutline"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIi-eW-NT5">
+                        <rect key="frame" x="51" y="8" width="541" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wF5-dm-AkX">
+                        <rect key="frame" x="51" y="26" width="386" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CIi-eW-NT5" firstAttribute="leading" secondItem="Z52-W8-eos" secondAttribute="trailing" constant="8" symbolic="YES" id="PZw-7E-UhC"/>
+                    <constraint firstItem="CIi-eW-NT5" firstAttribute="trailing" secondItem="wF5-dm-AkX" secondAttribute="trailing" constant="155" id="Qhc-gs-Z56"/>
+                    <constraint firstItem="CIi-eW-NT5" firstAttribute="leading" secondItem="wF5-dm-AkX" secondAttribute="leading" id="UzH-Ff-ECg"/>
+                    <constraint firstItem="Z52-W8-eos" firstAttribute="centerY" secondItem="FxF-gD-Pqn" secondAttribute="centerY" id="ZJu-hZ-jtr"/>
+                    <constraint firstItem="CIi-eW-NT5" firstAttribute="top" secondItem="FxF-gD-Pqn" secondAttribute="topMargin" id="ei6-Hd-3Ly"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="wF5-dm-AkX" secondAttribute="bottom" constant="-0.5" id="mIF-28-7Xr"/>
+                    <constraint firstItem="Z52-W8-eos" firstAttribute="leading" secondItem="FxF-gD-Pqn" secondAttribute="leadingMargin" id="o9h-Fj-F70"/>
+                    <constraint firstItem="wF5-dm-AkX" firstAttribute="top" secondItem="FxF-gD-Pqn" secondAttribute="topMargin" constant="18" id="toi-lu-pMP"/>
+                    <constraint firstItem="CIi-eW-NT5" firstAttribute="trailing" secondItem="FxF-gD-Pqn" secondAttribute="trailingMargin" id="uO5-vb-uyE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnImg" destination="Z52-W8-eos" id="wbi-cG-eLb"/>
+                <outlet property="lblByUser" destination="wF5-dm-AkX" id="XEA-6e-OG1"/>
+                <outlet property="lblTitle" destination="CIi-eW-NT5" id="HXE-vO-XOF"/>
+            </connections>
+            <point key="canvasLocation" x="-110" y="303.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="iconIssueOutline" width="35" height="35"/>
+    </resources>
+</document>
