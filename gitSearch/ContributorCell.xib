@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contribuitorCell" rowHeight="55" id="zbz-R6-t3C" customClass="ContribuitorTableViewCell">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contributorsCell" rowHeight="55" id="zbz-R6-t3C" customClass="ContributorTableViewCell">
             <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zbz-R6-t3C" id="yuu-Dd-Utm">
@@ -56,11 +56,8 @@
                 </variation>
             </tableViewCellContentView>
             <connections>
-                <outlet property="btnImg" destination="56j-ib-DMk" id="7ez-Hg-UwQ"/>
-                <outlet property="lblByUser" destination="oAN-am-Efz" id="7W4-kk-dS8"/>
-                <outlet property="lblCommits" destination="oAN-am-Efz" id="RQm-Dm-9xT"/>
-                <outlet property="lblTitle" destination="xVW-Oz-HXC" id="iD7-bp-ihQ"/>
-                <outlet property="lblUsername" destination="xVW-Oz-HXC" id="Mnu-Ji-aqk"/>
+                <outlet property="lblContributions" destination="oAN-am-Efz" id="cre-Ff-yDU"/>
+                <outlet property="lblUsername" destination="xVW-Oz-HXC" id="Lzy-zs-4LF"/>
             </connections>
             <point key="canvasLocation" x="-88" y="303.5"/>
         </tableViewCell>

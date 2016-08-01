@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ContribuitorTableViewCell : UITableViewCell
+@interface ContributorTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *lblUsername;
-@property (weak, nonatomic) IBOutlet UILabel *lblCommits;
+@property (weak, nonatomic) IBOutlet UILabel *lblContributions;
 
 @end

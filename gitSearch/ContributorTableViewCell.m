@@ -6,10 +6,10 @@
 //  Copyright © 2016 Alexander Camacho Gámez. All rights reserved.
 //
 
-#import "ContribuitorTableViewCell.h"
+#import "ContributorTableViewCell.h"
 
-@implementation ContribuitorTableViewCell
+@implementation ContributorTableViewCell
 
-@synthesize lblUsername, lblCommits;
+@synthesize lblUsername, lblContributions;
 
 @end
