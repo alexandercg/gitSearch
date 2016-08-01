@@ -23,6 +23,8 @@
 		118EB2BD1D4EE55D000CF3A9 /* GeneralTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 118EB2BC1D4EE55D000CF3A9 /* GeneralTableViewCell.m */; };
 		118EB2BF1D4EF09A000CF3A9 /* GeneralInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 118EB2BE1D4EF09A000CF3A9 /* GeneralInfoCell.xib */; };
 		118EB2C11D4EF127000CF3A9 /* IssueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 118EB2C01D4EF127000CF3A9 /* IssueCell.xib */; };
+		118EB2C31D4F00E7000CF3A9 /* ContribuitorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 118EB2C21D4F00E7000CF3A9 /* ContribuitorCell.xib */; };
+		118EB2C61D4F0200000CF3A9 /* ContribuitorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 118EB2C51D4F0200000CF3A9 /* ContribuitorTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,9 @@
 		118EB2BC1D4EE55D000CF3A9 /* GeneralTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralTableViewCell.m; sourceTree = "<group>"; };
 		118EB2BE1D4EF09A000CF3A9 /* GeneralInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralInfoCell.xib; sourceTree = "<group>"; };
 		118EB2C01D4EF127000CF3A9 /* IssueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IssueCell.xib; sourceTree = "<group>"; };
+		118EB2C21D4F00E7000CF3A9 /* ContribuitorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContribuitorCell.xib; sourceTree = "<group>"; };
+		118EB2C41D4F0200000CF3A9 /* ContribuitorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContribuitorTableViewCell.h; sourceTree = "<group>"; };
+		118EB2C51D4F0200000CF3A9 /* ContribuitorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContribuitorTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,10 +138,13 @@
 				118EB2B01D4EB4A9000CF3A9 /* RepoTableViewCell.m */,
 				118EB2BB1D4EE55D000CF3A9 /* GeneralTableViewCell.h */,
 				118EB2BC1D4EE55D000CF3A9 /* GeneralTableViewCell.m */,
+				118EB2BE1D4EF09A000CF3A9 /* GeneralInfoCell.xib */,
 				118EB2B81D4EDFD0000CF3A9 /* IssueTableViewCell.h */,
 				118EB2B91D4EDFD0000CF3A9 /* IssueTableViewCell.m */,
-				118EB2BE1D4EF09A000CF3A9 /* GeneralInfoCell.xib */,
 				118EB2C01D4EF127000CF3A9 /* IssueCell.xib */,
+				118EB2C41D4F0200000CF3A9 /* ContribuitorTableViewCell.h */,
+				118EB2C51D4F0200000CF3A9 /* ContribuitorTableViewCell.m */,
+				118EB2C21D4F00E7000CF3A9 /* ContribuitorCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -201,6 +209,7 @@
 				118EB29D1D4E9BD7000CF3A9 /* LaunchScreen.storyboard in Resources */,
 				118EB2C11D4EF127000CF3A9 /* IssueCell.xib in Resources */,
 				118EB29A1D4E9BD7000CF3A9 /* Assets.xcassets in Resources */,
+				118EB2C31D4F00E7000CF3A9 /* ContribuitorCell.xib in Resources */,
 				118EB2BF1D4EF09A000CF3A9 /* GeneralInfoCell.xib in Resources */,
 				118EB2981D4E9BD7000CF3A9 /* Main.storyboard in Resources */,
 			);
@@ -218,6 +227,7 @@
 				118EB2A61D4E9F93000CF3A9 /* GitFetcher.m in Sources */,
 				118EB2BD1D4EE55D000CF3A9 /* GeneralTableViewCell.m in Sources */,
 				118EB2BA1D4EDFD0000CF3A9 /* IssueTableViewCell.m in Sources */,
+				118EB2C61D4F0200000CF3A9 /* ContribuitorTableViewCell.m in Sources */,
 				118EB2A91D4EA363000CF3A9 /* Repository.m in Sources */,
 				118EB2AD1D4EA9DE000CF3A9 /* ResultsTableViewController.m in Sources */,
 				118EB2951D4E9BD7000CF3A9 /* SearchViewController.m in Sources */,
