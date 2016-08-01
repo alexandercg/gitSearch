@@ -29,27 +29,48 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wF5-dm-AkX">
-                        <rect key="frame" x="51" y="26" width="386" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <rect key="frame" x="51" y="25" width="300" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="300" id="dSa-ET-Lc4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Comments" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6n-pc-m9d">
+                        <rect key="frame" x="442" y="25" width="150" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="Af2-at-FBO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="M6n-pc-m9d" firstAttribute="bottom" secondItem="Z52-W8-eos" secondAttribute="bottom" constant="1" id="DsO-2b-7gU"/>
                     <constraint firstItem="CIi-eW-NT5" firstAttribute="leading" secondItem="Z52-W8-eos" secondAttribute="trailing" constant="8" symbolic="YES" id="PZw-7E-UhC"/>
-                    <constraint firstItem="CIi-eW-NT5" firstAttribute="trailing" secondItem="wF5-dm-AkX" secondAttribute="trailing" constant="155" id="Qhc-gs-Z56"/>
+                    <constraint firstItem="CIi-eW-NT5" firstAttribute="trailing" secondItem="wF5-dm-AkX" secondAttribute="trailing" constant="241" id="Qhc-gs-Z56"/>
                     <constraint firstItem="CIi-eW-NT5" firstAttribute="leading" secondItem="wF5-dm-AkX" secondAttribute="leading" id="UzH-Ff-ECg"/>
                     <constraint firstItem="Z52-W8-eos" firstAttribute="centerY" secondItem="FxF-gD-Pqn" secondAttribute="centerY" id="ZJu-hZ-jtr"/>
                     <constraint firstItem="CIi-eW-NT5" firstAttribute="top" secondItem="FxF-gD-Pqn" secondAttribute="topMargin" id="ei6-Hd-3Ly"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="wF5-dm-AkX" secondAttribute="bottom" constant="-0.5" id="mIF-28-7Xr"/>
+                    <constraint firstItem="M6n-pc-m9d" firstAttribute="trailing" secondItem="CIi-eW-NT5" secondAttribute="trailing" id="jzb-aq-5df"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="wF5-dm-AkX" secondAttribute="bottom" constant="1" id="mIF-28-7Xr"/>
                     <constraint firstItem="Z52-W8-eos" firstAttribute="leading" secondItem="FxF-gD-Pqn" secondAttribute="leadingMargin" id="o9h-Fj-F70"/>
-                    <constraint firstItem="wF5-dm-AkX" firstAttribute="top" secondItem="FxF-gD-Pqn" secondAttribute="topMargin" constant="18" id="toi-lu-pMP"/>
+                    <constraint firstItem="M6n-pc-m9d" firstAttribute="top" secondItem="FxF-gD-Pqn" secondAttribute="topMargin" constant="17" id="ruo-Yl-iaC"/>
+                    <constraint firstItem="wF5-dm-AkX" firstAttribute="top" secondItem="FxF-gD-Pqn" secondAttribute="topMargin" constant="17" id="toi-lu-pMP"/>
                     <constraint firstItem="CIi-eW-NT5" firstAttribute="trailing" secondItem="FxF-gD-Pqn" secondAttribute="trailingMargin" id="uO5-vb-uyE"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Qhc-gs-Z56"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="btnImg" destination="Z52-W8-eos" id="wbi-cG-eLb"/>
                 <outlet property="lblByUser" destination="wF5-dm-AkX" id="XEA-6e-OG1"/>
+                <outlet property="lblComments" destination="M6n-pc-m9d" id="pKz-5z-ft6"/>
                 <outlet property="lblTitle" destination="CIi-eW-NT5" id="HXE-vO-XOF"/>
             </connections>
             <point key="canvasLocation" x="-110" y="303.5"/>

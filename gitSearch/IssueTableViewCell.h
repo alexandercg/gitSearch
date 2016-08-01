@@ -12,4 +12,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 @property (weak, nonatomic) IBOutlet UILabel *lblByUser;
 @property (weak, nonatomic) IBOutlet UIButton *btnImg;
+@property (weak, nonatomic) IBOutlet UILabel *lblComments;
 @end

@@ -9,5 +9,5 @@
 #import "IssueTableViewCell.h"
 
 @implementation IssueTableViewCell
-@synthesize btnImg, lblTitle, lblByUser;
+@synthesize btnImg, lblTitle, lblByUser, lblComments;
 @end
