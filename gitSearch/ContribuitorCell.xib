@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contribuitorCell" rowHeight="55" id="zbz-R6-t3C" customClass="ContribuitorTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zbz-R6-t3C" id="yuu-Dd-Utm">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56j-ib-DMk">
+                        <rect key="frame" x="8" y="10" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="V9l-bF-SNI"/>
+                        </constraints>
+                        <state key="normal" image="iconUser" backgroundImage="iconUser"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVW-Oz-HXC">
+                        <rect key="frame" x="51" y="8" width="541" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAN-am-Efz">
+                        <rect key="frame" x="51" y="25" width="300" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="300" id="sd4-Qz-HVw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="oAN-am-Efz" secondAttribute="bottom" constant="1" id="433-oY-zhi"/>
+                    <constraint firstItem="56j-ib-DMk" firstAttribute="centerY" secondItem="yuu-Dd-Utm" secondAttribute="centerY" id="GNY-8c-nLR"/>
+                    <constraint firstItem="oAN-am-Efz" firstAttribute="top" secondItem="yuu-Dd-Utm" secondAttribute="topMargin" constant="17" id="KGC-JY-r1T"/>
+                    <constraint firstItem="56j-ib-DMk" firstAttribute="leading" secondItem="yuu-Dd-Utm" secondAttribute="leadingMargin" id="KfT-vc-er9"/>
+                    <constraint firstItem="xVW-Oz-HXC" firstAttribute="top" secondItem="yuu-Dd-Utm" secondAttribute="topMargin" id="M8h-rB-JUM"/>
+                    <constraint firstItem="xVW-Oz-HXC" firstAttribute="trailing" secondItem="yuu-Dd-Utm" secondAttribute="trailingMargin" id="WPI-pO-yPX"/>
+                    <constraint firstItem="xVW-Oz-HXC" firstAttribute="trailing" secondItem="oAN-am-Efz" secondAttribute="trailing" constant="241" id="cFw-MH-ohf"/>
+                    <constraint firstItem="xVW-Oz-HXC" firstAttribute="leading" secondItem="oAN-am-Efz" secondAttribute="leading" id="m4F-rE-khb"/>
+                    <constraint firstItem="xVW-Oz-HXC" firstAttribute="leading" secondItem="56j-ib-DMk" secondAttribute="trailing" constant="8" symbolic="YES" id="wuA-Ya-c0V"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="cFw-MH-ohf"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnImg" destination="56j-ib-DMk" id="7ez-Hg-UwQ"/>
+                <outlet property="lblByUser" destination="oAN-am-Efz" id="7W4-kk-dS8"/>
+                <outlet property="lblCommits" destination="oAN-am-Efz" id="RQm-Dm-9xT"/>
+                <outlet property="lblTitle" destination="xVW-Oz-HXC" id="iD7-bp-ihQ"/>
+                <outlet property="lblUsername" destination="xVW-Oz-HXC" id="Mnu-Ji-aqk"/>
+            </connections>
+            <point key="canvasLocation" x="-88" y="303.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="iconUser" width="35" height="35"/>
+    </resources>
+</document>
