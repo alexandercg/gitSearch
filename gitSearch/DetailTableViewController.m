@@ -11,6 +11,7 @@
 #import "IssueTableViewCell.h"
 #import "RepoIssues.h"
 #import "GeneralTableViewCell.h"
+#import "ContribuitorTableViewCell.h"
 @import SafariServices;
 
 @implementation DetailTableViewController
@@ -168,7 +169,7 @@
             height = 55;
             break;
         case 2:
-            height = 45;
+            height = 55;
             break;
     }
     return height;
