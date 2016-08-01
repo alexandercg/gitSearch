@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="140"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gr4-rW-7sM" id="srB-1z-Rko">
-                <rect key="frame" x="0.0" y="0.0" width="600" height="140"/>
+                <rect key="frame" x="0.0" y="0.0" width="600" height="139.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" scrollEnabled="NO" editable="NO" text="lorem" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yhr-Pj-iko">
@@ -25,7 +25,7 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJ0-d4-BC6">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJ0-d4-BC6">
                         <rect key="frame" x="128" y="100" width="149" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="149" id="kDM-Ra-FXu"/>
