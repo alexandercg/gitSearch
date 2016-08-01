@@ -24,6 +24,7 @@
     txtSearch.delegate = self;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchFinished:) name:@"SearchFinishedWithResults" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchFinished:) name:@"SearchFinishedWithNoResults" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchFinished:) name:@"SearchFinishedWithError" object:nil];
     
     
 }
@@ -50,6 +51,10 @@
 
 -(void) searchFinished:(NSNotification *) notification{
     [self loaderHidden:YES];
+    if ([[notification name] isEqualToString:@"SearchFinishedWithError"]){
+        [self showAlertWithTitle:@"Warning" message:@"Please verify your internet connection or try it later."];
+        return;
+    }
     if ([[notification name] isEqualToString:@"SearchFinishedWithNoResults"]){
         [self showAlertWithTitle:@"No results" message:@"Sorry there is no results for your search."];
         return;
