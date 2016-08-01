@@ -15,12 +15,16 @@
 @property (nonatomic, retain) NSString *repoURL;
 @property int starCount;
 @property int issuesCount;
+@property (nonatomic, retain) NSDate *updatedDate;
+@property (nonatomic, retain) NSString *nameUser;
 
 
 - (id)initWithFullName:(NSString*)name
            description:(NSString*)description
                    url:(NSString*)url
                  stars:(int)stars
-                issues:(int)issues;
+                issues:(int)issues
+           updatedDate:(NSDate*)date
+              nameUser:(NSString*)user;
 
 @end

@@ -74,11 +74,39 @@
     for (NSDictionary* item in items) {
         Repository* repo = [[Repository alloc] initWithFullName:[item valueForKey:@"full_name"]
                                                     description:[item valueForKey:@"description"]
-                                                            url:[item valueForKey:@"html_url"]
+                                                            url:[item valueForKey:@"homepage"]
                                                           stars:[[item valueForKey:@"stargazers_count"] intValue]
-                                                         issues:[[item valueForKey:@"open_issues_count"] intValue]];
+                                                         issues:[[item valueForKey:@"open_issues_count"] intValue]
+                                                    updatedDate:[item valueForKey:@"updated_at"]
+                                                       nameUser:[[item valueForKey:@"owner"] valueForKey:@"login"]];
         [instance.itemsFound addObject:repo];
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end
