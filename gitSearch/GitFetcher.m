@@ -9,12 +9,13 @@
 #import "GitFetcher.h"
 #import "Repository.h"
 #import "RepoIssues.h"
+#import "RepoContributor.h"
 
 #define ApiURL  @"https://api.github.com"
 
 @implementation GitFetcher
 
-@synthesize languageSearch, itemsFound, repoIssues, repoContribuitors;
+@synthesize languageSearch, itemsFound, repoIssues, repoContributors;
 
 - (id)init {
     self = [super init];
@@ -160,8 +161,63 @@
                                                       coments:[[item valueForKey:@"comments"] intValue]];
         [instance.repoIssues addObject:issue];
     }
+}
+
+-(void) getContributorsByRepo:(NSString*)repo{
+    NSURL *url = [NSURL URLWithString:
+                  [NSString stringWithFormat:@"%@/repos/%@/contributors", ApiURL, repo]];
     
-    NSLog(@"");
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (data.length > 0 && error == nil) {
+            
+            NSArray *items = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            
+            [self manageContributorsFound:items];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if ([items count] > 0) {
+                    [[NSNotificationCenter defaultCenter]
+                     postNotificationName:@"SearchFinishedWithUsers"
+                     object:self];
+                }
+            });
+        }else{
+            //NSLog(@"%@",[error localizedDescription]);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[NSNotificationCenter defaultCenter]
+                 postNotificationName:@"RequestFinishedWithError"
+                 object:self];
+                
+            });
+        }
+        
+        
+    }] resume];
+    
+}
+
+-(void)manageContributorsFound:(NSArray*) items{
+    if (instance.repoContributors == nil) {
+        instance.repoContributors = [[NSMutableArray alloc] init];
+    }
+    [instance.repoContributors removeAllObjects];
+    NSArray *top;
+    if ([items count] >= 3) {
+        top = [items subarrayWithRange:NSMakeRange(0, 3)];
+    }else{
+        top = items;
+    }
+    
+    
+    for (NSDictionary* item in top) {
+        RepoContributor *user = [[RepoContributor alloc] initWithUsername:[item valueForKey:@"login"]
+                                                             contributions:[[item valueForKey:@"contributions"] intValue]];
+        [instance.repoContributors addObject:user];
+    }
+    
 }
 
 

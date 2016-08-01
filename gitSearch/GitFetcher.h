@@ -16,7 +16,7 @@
 @property (nonatomic, retain) NSMutableArray *itemsFound;
 
 @property (nonatomic, retain) NSMutableArray *repoIssues;
-@property (nonatomic, retain) NSMutableArray *repoContribuitors;
+@property (nonatomic, retain) NSMutableArray *repoContributors;
 
 -(id) init;
 +(id)sharedInstance;
@@ -25,6 +25,8 @@
 -(void) searchRepoBy:(NSString*)language andPage:(int)page;
 
 -(void) getIssuesByRepo:(NSString*)repo;
+
+-(void) getContributorsByRepo:(NSString*)repo;
 
 
 
