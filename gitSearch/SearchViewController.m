@@ -22,13 +22,23 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     txtSearch.delegate = self;
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchFinished:) name:@"SearchFinishedWithResults" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchFinished:) name:@"SearchFinishedWithNoResults" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchFinished:) name:@"SearchFinishedWithError" object:nil];
+    
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
     [self.view addGestureRecognizer:tap];
     
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchFinished:) name:@"SearchFinishedWithResults" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchFinished:) name:@"SearchFinishedWithNoResults" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchFinished:) name:@"SearchFinishedWithError" object:nil];
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"SearchFinishedWithResults" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"SearchFinishedWithNoResults" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"SearchFinishedWithError" object:nil];
 }
 
 -(void) hideKeyboard{
