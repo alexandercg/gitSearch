@@ -113,6 +113,11 @@
         [cell.btnURL setTitle:[NSString stringWithFormat:@"%@", repoSelected.repoURL] forState: UIControlStateNormal];
         [cell.btnURL addTarget:self action:@selector(goTuURL:) forControlEvents:UIControlEventTouchUpInside];
         cell.btnURL.hidden = [self verifyTextField:[NSString stringWithFormat:@"%@", repoSelected.repoURL]];
+        
+        NSDateFormatter *format = [[NSDateFormatter alloc] init];
+        [format setDateFormat:@"dd/MM/yyyy"];
+        [format setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
+        cell.lblUpdatedDate.text = [format stringFromDate:repoSelected.updatedDate];
         return cell;
     }
     if (indexPath.section == 1) {
@@ -122,9 +127,11 @@
             cell = [nib objectAtIndex:0];
         }
         
+        
         RepoIssues *item = [[[GitFetcher sharedInstance] repoIssues] objectAtIndex:indexPath.row];
         cell.lblTitle.text = item.issueTitle;
-        cell.lblByUser.text = item.createdBy;
+        cell.lblByUser.text = [NSString stringWithFormat:@"#%d Created by %@", item.number, item.createdBy];
+        cell.lblComments.text = [NSString stringWithFormat:@"%d Comments", item.coments];
         return cell;
     }
     if (indexPath.section == 2) {
@@ -133,6 +140,22 @@
     }
     return nil;
 
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    NSString *header = @"";
+    switch (section) {
+        case 0:
+            header = @"";
+            break;
+        case 1:
+            header = @"Latest Issues";
+            break;
+        case 2:
+            header = @"Top Contribuitors";
+            break;
+    }
+    return header;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

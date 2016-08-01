@@ -85,6 +85,9 @@
 }
 
 -(void) manageResultItems:(NSArray*)items{
+    NSDateFormatter *dateformat = [[NSDateFormatter alloc] init];
+    //2014-07-10T16:03:45Z
+    [dateformat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZ"];
     if (instance.itemsFound == nil) {
         instance.itemsFound = [[NSMutableArray alloc] init];
     }
@@ -94,7 +97,7 @@
                                                             url:[item valueForKey:@"homepage"]
                                                           stars:[[item valueForKey:@"stargazers_count"] intValue]
                                                          issues:[[item valueForKey:@"open_issues_count"] intValue]
-                                                    updatedDate:[item valueForKey:@"updated_at"]
+                                                    updatedDate:[dateformat dateFromString:[item valueForKey:@"updated_at"]]
                                                        nameUser:[[item valueForKey:@"owner"] valueForKey:@"login"]];
         [instance.itemsFound addObject:repo];
     }
