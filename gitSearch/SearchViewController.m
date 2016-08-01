@@ -26,7 +26,13 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchFinished:) name:@"SearchFinishedWithNoResults" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchFinished:) name:@"SearchFinishedWithError" object:nil];
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
+    [self.view addGestureRecognizer:tap];
     
+}
+
+-(void) hideKeyboard{
+    [self.view endEditing:YES];
 }
 
 -(void) loaderHidden:(BOOL)hidden{
