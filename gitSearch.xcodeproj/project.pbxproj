@@ -99,14 +99,7 @@
 				118EB2AA1D4EA7C4000CF3A9 /* Controllers */,
 				118EB2AE1D4EB47C000CF3A9 /* View */,
 				118EB2961D4E9BD7000CF3A9 /* Main.storyboard */,
-				118EB2A41D4E9F93000CF3A9 /* GitFetcher.h */,
-				118EB2A51D4E9F93000CF3A9 /* GitFetcher.m */,
-				118EB2A71D4EA363000CF3A9 /* Repository.h */,
-				118EB2A81D4EA363000CF3A9 /* Repository.m */,
-				118EB2B51D4ED505000CF3A9 /* RepoIssues.h */,
-				118EB2B61D4ED505000CF3A9 /* RepoIssues.m */,
-				118EB2C71D4F037D000CF3A9 /* RepoContributor.h */,
-				118EB2C81D4F037D000CF3A9 /* RepoContributor.m */,
+				118EB2CA1D4F0AE4000CF3A9 /* GitApi */,
 				118EB2991D4E9BD7000CF3A9 /* Assets.xcassets */,
 				118EB29B1D4E9BD7000CF3A9 /* LaunchScreen.storyboard */,
 				118EB29E1D4E9BD7000CF3A9 /* Info.plist */,
@@ -152,6 +145,21 @@
 				118EB2C21D4F00E7000CF3A9 /* ContributorCell.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		118EB2CA1D4F0AE4000CF3A9 /* GitApi */ = {
+			isa = PBXGroup;
+			children = (
+				118EB2A41D4E9F93000CF3A9 /* GitFetcher.h */,
+				118EB2A51D4E9F93000CF3A9 /* GitFetcher.m */,
+				118EB2A71D4EA363000CF3A9 /* Repository.h */,
+				118EB2A81D4EA363000CF3A9 /* Repository.m */,
+				118EB2B51D4ED505000CF3A9 /* RepoIssues.h */,
+				118EB2B61D4ED505000CF3A9 /* RepoIssues.m */,
+				118EB2C71D4F037D000CF3A9 /* RepoContributor.h */,
+				118EB2C81D4F037D000CF3A9 /* RepoContributor.m */,
+			);
+			name = GitApi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
