@@ -14,5 +14,12 @@
 @property (nonatomic) Repository *repoSelected;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgDetailView;
+@property (weak, nonatomic) IBOutlet UIButton *btnUsername;
+@property (weak, nonatomic) IBOutlet UITextView *textViewDescription;
+@property (weak, nonatomic) IBOutlet UILabel *lblUpdatedDate;
+@property (weak, nonatomic) IBOutlet UIButton *btnURL;
+
+- (IBAction)goToProfile:(id)sender;
+- (IBAction)goTuURL:(id)sender;
 
 @end
